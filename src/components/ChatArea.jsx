@@ -38,7 +38,6 @@ const ChatArea = ({
   const currentUser = JSON.parse(localStorage.getItem("userInfo") || {});
   useEffect(() => {
     // fetchGroups();
-    console.log("useEffect triggered:", { selectedGroup, socket });
     if (selectedGroup && socket) {
       const currentUser = JSON.parse(localStorage.getItem("userInfo") || {});
       //fetch messages
