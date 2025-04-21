@@ -16,7 +16,6 @@ import { FiSend, FiInfo, FiMessageCircle } from "react-icons/fi";
 import UsersList from "./UsersList";
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
-dotenv.config();
 
 const ChatArea = ({
   selectedGroup,
