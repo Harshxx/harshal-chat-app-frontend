@@ -25,7 +25,7 @@ const Register = () => {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/api/user/register",
+        `${process.env.MAIN_URL}/api/user/register`,
         {
           username,
           email,
