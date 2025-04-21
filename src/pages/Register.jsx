@@ -32,7 +32,7 @@ const Register = () => {
           password,
         }
       );
-      //navigate to chat page
+    
       navigate("/login");
     } catch (error) {
       toast({
