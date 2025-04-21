@@ -100,7 +100,7 @@ const ChatArea = ({
     const token = currentUser?.token;
     try {
       const { data } = await axios.get(
-        `${process.env.MAIN_URL}/api/message/${selectedGroup?._id}`,
+        `https://harshal-chat-app-backend.onrender.com/api/message/${selectedGroup?._id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -119,7 +119,7 @@ const ChatArea = ({
     try {
       const token = currentUser?.token;
       const { data } = await axios.post(
-        `${process.env.MAIN_URL}/api/message`,
+        `https://harshal-chat-app-backend.onrender.com/api/message`,
         {
           content: newMessage,
           groupId: selectedGroup?._id,
@@ -250,7 +250,7 @@ const ChatArea = ({
     try {
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
       const token = userInfo.token;
-      const { data } = await axios.get(`${process.env.MAIN_URL}/api/group`, {
+      const { data } = await axios.get(`https://harshal-chat-app-backend.onrender.com/api/group`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -283,7 +283,7 @@ const ChatArea = ({
     const userInfo = JSON.parse(localStorage.getItem("userInfo") || {});
     const token = userInfo.token;
     try {
-      const { data } = await axios.get(`${process.env.MAIN_URL}/api/group`, {
+      const { data } = await axios.get(`https://harshal-chat-app-backend.onrender.com/api/group`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const selectedGroupObj = groups.find(
