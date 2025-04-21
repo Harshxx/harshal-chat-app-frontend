@@ -60,7 +60,7 @@ const Sidebar = ({
     try {
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
       const token = userInfo.token;
-      const { data } = await axios.get("http://localhost:3000/api/group", {
+      const { data } = await axios.get("https://harshal-chat-app-backend.onrender.com/api/group", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -92,7 +92,7 @@ const Sidebar = ({
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
       const token = userInfo.token;
       await axios.post(
-        "http://localhost:3000/api/group",
+        "https://harshal-chat-app-backend.onrender.com/api/group",
         {
           name: newGroupName,
           description: newGroupDescription,
@@ -135,7 +135,7 @@ const Sidebar = ({
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
       const token = userInfo.token;
       await axios.post(
-        `http://localhost:3000/api/group/${groupId}/join`,
+        `https://harshal-chat-app-backend.onrender.com/api/group/${groupId}/join`,
         {},
         {
           headers: {
@@ -168,7 +168,7 @@ const Sidebar = ({
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
       const token = userInfo.token;
       await axios.post(
-        `http://localhost:3000/api/group/${groupId}/leave`,
+        `https://harshal-chat-app-backend.onrender.com/api/group/${groupId}/leave`,
         {},
         {
           headers: {
