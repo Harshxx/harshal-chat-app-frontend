@@ -24,7 +24,7 @@ const Login = () => {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        `${process.env.MAIN_URL}/api/user/login`,
+        `https://harshal-chat-app-backend.onrender.com/api/user/login`,
         {
           email,
           password,
