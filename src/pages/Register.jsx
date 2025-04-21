@@ -25,7 +25,7 @@ const Register = () => {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        `${process.env.MAIN_URL}/api/user/register`,
+        `https://harshal-chat-app-backend.onrender.com/api/user/register`,
         {
           username,
           email,
